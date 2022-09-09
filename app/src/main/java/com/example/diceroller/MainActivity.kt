@@ -22,20 +22,22 @@ class MainActivity : AppCompatActivity() {
         rollButton.setOnClickListener {
             val toast = Toast.makeText(this, "Dice Rolled!", Toast.LENGTH_SHORT)
             toast.show()
-            rollDice()
+            val leftResultText: TextView = findViewById(R.id.textViewLeft)
+            rollDice(leftResultText)
+            val rightResultText: TextView = findViewById(R.id.textViewRight)
+            rollDice(rightResultText)
         }
     }
 
     /**
      * Roll the dice and update the screen with the result.
      */
-    private fun rollDice() {
+    private fun rollDice(resultText: TextView) {
         // Create a roll a dice with 6 sides
         val dice = Dice(6)
         val diceRoll = dice.roll()
 
         // Update the displayed dice roll result
-        val resultText: TextView = findViewById(R.id.textView)
         resultText.text = diceRoll.toString()
     }
 }
