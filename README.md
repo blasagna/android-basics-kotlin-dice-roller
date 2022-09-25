@@ -6,3 +6,4 @@ Part of the [Android Basics in Kotlin](https://developer.android.com/courses/and
 
 Solutions available in repository:
 * https://github.com/google-developer-training/android-basics-kotlin-create-dice-roller-with-button-app-solution
+* https://github.com/google-developer-training/android-basics-kotlin-dice-roller-with-images-app-solution
