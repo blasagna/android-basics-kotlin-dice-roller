@@ -14,4 +14,13 @@ class ExampleUnitTest {
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
     }
+
+    @Test
+    fun generates_number() {
+        val numSides = 22
+        val dice = Dice(numSides)
+        val roll = dice.roll()
+        assertTrue(roll > 0)
+        assertTrue(roll <= numSides)
+    }
 }
